@@ -262,7 +262,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenExpenseMem
           <div>
             <h4 className="text-lg font-bold text-white">30-Day Risk-Free Money-Back Guarantee</h4>
             <p className="mt-1.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
-              If Prompt-Cache Guardian does not measurably reduce your token consumption and Anthropic API invoice within 30 days, send an email to <a href="mailto:bkass0260@gmail.com" className="text-emerald-400 underline underline-offset-2">bkass0260@gmail.com</a> and your purchase will be refunded in full within one business day.
+              If Prompt-Cache Guardian does not measurably reduce your token consumption and Anthropic API invoice within 30 days, send an email to <a href="mailto:support@promptcacheguardian.com" className="text-emerald-400 underline underline-offset-2">support@promptcacheguardian.com</a> and your purchase will be refunded in full within one business day.
             </p>
           </div>
         </div>

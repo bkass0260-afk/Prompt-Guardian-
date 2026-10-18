@@ -116,11 +116,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDocs, onOpenGhPages }) => 
               Have questions about your agent setup or volume licensing? Email us directly:
             </p>
             <a
-              href="mailto:bkass0260@gmail.com"
+              href="mailto:support@promptcacheguardian.com"
               className="inline-flex items-center gap-1.5 text-xs font-mono text-emerald-400 hover:text-emerald-300 transition-colors"
             >
               <Mail className="h-3.5 w-3.5" />
-              <span>bkass0260@gmail.com</span>
+              <span>support@promptcacheguardian.com</span>
             </a>
             <div className="pt-2 text-[11px] text-slate-500">
               Response guaranteed within one business day.

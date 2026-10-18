@@ -56,8 +56,8 @@ const FAQS: FaqItem[] = [
     answer: (
       <span>
         30-day, no-questions-asked money-back guarantee. If Prompt-Cache Guardian does not measurably reduce your token bill, send an email to{' '}
-        <a href="mailto:bkass0260@gmail.com" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300">
-          bkass0260@gmail.com
+        <a href="mailto:support@promptcacheguardian.com" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300">
+          support@promptcacheguardian.com
         </a>{' '}
         within 30 days and your purchase will be refunded in full within one business day.
       </span>
