@@ -1,0 +1,7 @@
+{
+  "name": "Prompt Guardian",
+  "description": "High-performance local Rust token pruning proxy for Claude Code, Aider, and LLM coding agents. Preserves Anthropic prompt caching and slashes token bills.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
