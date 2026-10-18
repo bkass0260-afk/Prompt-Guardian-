@@ -12,14 +12,12 @@ import { PricingSection } from './components/PricingSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { SetupModal } from './components/SetupModal';
-import { GhPagesModal } from './components/GhPagesModal';
 import { ExpenseMemoModal } from './components/ExpenseMemoModal';
 import { TrustBadgesStrip } from './components/TrustBadges';
 import { ArrowRight, Shield, Zap, Sparkles, Terminal, FileText } from 'lucide-react';
 
 export default function App() {
   const [docsModalOpen, setDocsModalOpen] = useState(false);
-  const [ghPagesModalOpen, setGhPagesModalOpen] = useState(false);
   const [expenseModalOpen, setExpenseModalOpen] = useState(false);
   const [showStickyBar, setShowStickyBar] = useState(false);
 
@@ -36,7 +34,6 @@ export default function App() {
       {/* Top Navigation Bar */}
       <Header
         onOpenDocs={() => setDocsModalOpen(true)}
-        onOpenGhPages={() => setGhPagesModalOpen(true)}
         onOpenExpenseMemo={() => setExpenseModalOpen(true)}
       />
 
@@ -176,7 +173,6 @@ export default function App() {
       {/* Footer */}
       <Footer
         onOpenDocs={() => setDocsModalOpen(true)}
-        onOpenGhPages={() => setGhPagesModalOpen(true)}
       />
 
       {/* Mobile Floating Sticky Purchase Bar */}
@@ -215,12 +211,6 @@ export default function App() {
       <SetupModal
         isOpen={docsModalOpen}
         onClose={() => setDocsModalOpen(false)}
-      />
-
-      {/* GitHub Pages Deployment Guide Modal */}
-      <GhPagesModal
-        isOpen={ghPagesModalOpen}
-        onClose={() => setGhPagesModalOpen(false)}
       />
 
       {/* Employer Expense Memo Kit Modal */}

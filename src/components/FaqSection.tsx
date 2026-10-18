@@ -64,10 +64,10 @@ const FAQS: FaqItem[] = [
     ),
   },
   {
-    id: 'github-pages',
-    question: 'Can I publish this landing page to GitHub Pages?',
+    id: 'updates',
+    question: 'How do software updates and new releases work?',
     answer:
-      'Yes! This web app is built with Vite and React with relative base paths pre-configured (base: "./"). You can run "npm run build" and push the dist folder or configure a standard GitHub Actions Pages workflow to publish the site in under two minutes.',
+      'Your one-time purchase includes lifetime access to all v0.x minor updates, performance patches, and compatibility releases as new models or agent versions launch. You will receive an email update with a fresh download link whenever a release is published.',
   },
 ];
 

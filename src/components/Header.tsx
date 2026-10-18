@@ -3,11 +3,10 @@ import { Terminal, Shield, ExternalLink, Github } from 'lucide-react';
 
 interface HeaderProps {
   onOpenDocs: () => void;
-  onOpenGhPages: () => void;
   onOpenExpenseMemo: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onOpenDocs, onOpenGhPages, onOpenExpenseMemo }) => {
+export const Header: React.FC<HeaderProps> = ({ onOpenDocs, onOpenExpenseMemo }) => {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-slate-800/80 bg-[#070b12]/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-8 px-4 sm:px-6 lg:px-8">
@@ -41,19 +40,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenDocs, onOpenGhPages, onOpe
         {/* Zone 3: Actions (Docs / Expense / Primary Buy CTA) */}
         <div className="flex items-center gap-2.5 shrink-0">
           <button
-            onClick={onOpenExpenseMemo}
+            onClick={onOpenDocs}
             className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 bg-slate-900/60 rounded-lg transition-colors whitespace-nowrap shrink-0"
           >
-            <span>Expense Memo</span>
+            <Terminal className="h-3.5 w-3.5" />
+            <span>Setup Guide</span>
           </button>
 
           <button
-            onClick={onOpenGhPages}
-            title="How to publish this site on GitHub Pages"
+            onClick={onOpenExpenseMemo}
             className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700 bg-slate-900/60 rounded-lg transition-colors whitespace-nowrap shrink-0"
           >
-            <Github className="h-3.5 w-3.5" />
-            <span>GitHub Pages</span>
+            <span>Expense Memo</span>
           </button>
 
           <a

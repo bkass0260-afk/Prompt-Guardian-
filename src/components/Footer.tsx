@@ -3,10 +3,9 @@ import { Shield, Mail, ExternalLink, Github, ArrowUp } from 'lucide-react';
 
 interface FooterProps {
   onOpenDocs: () => void;
-  onOpenGhPages: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenDocs, onOpenGhPages }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenDocs }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -78,14 +77,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenDocs, onOpenGhPages }) => 
                   className="hover:text-emerald-400 transition-colors text-left"
                 >
                   CLI Documentation
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={onOpenGhPages}
-                  className="hover:text-emerald-400 transition-colors text-left flex items-center gap-1"
-                >
-                  <span>Deploy to GitHub Pages</span>
                 </button>
               </li>
               <li>
