@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bkass0260-afk.github.io/Prompt-Guardian-/sitemap.xml
