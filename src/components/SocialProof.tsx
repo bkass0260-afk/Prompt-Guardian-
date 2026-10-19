@@ -9,38 +9,42 @@ interface CaseStudy {
   stack: string;
   metric: string;
   metricLabel: string;
+  verified: boolean;
 }
 
 const CASE_STUDIES: CaseStudy[] = [
   {
     id: '1',
     quote:
-      'Running cargo test inside Claude Code used to incinerate 15,000 tokens every time a single assertion failed. With Guardian, passing noise disappears, the stack trace stays intact, and our prompt-cache hit rate jumped from 58% to 94%. It paid for itself before lunchtime.',
+      'Running cargo test inside Claude Code used to burn through a large chunk of our context on passing test lines every time a single assertion failed. With Guardian, the passing lines are collapsed, the stack trace stays intact, and our measured prompt-cache hit rate improved substantially across turns.',
     author: 'Alexandre Roy',
     role: 'Staff Rust & Distributed Systems Engineer',
     stack: 'Claude Code · Rust · Axum',
-    metric: '-84.2%',
+    metric: 'Measured',
     metricLabel: 'token reduction on test runs',
+    verified: false,
   },
   {
     id: '2',
     quote:
-      'Our team was racking up $1,400/month across 6 developers on Claude 3.5 Sonnet. Guardian dropped our monthly Anthropic bill to under $420. The best part is zero config: export one environment variable in .zshrc and forget about it.',
+      'Our team was spending a meaningful amount on Claude 3.5 Sonnet each month across 6 developers. Guardian reduced our monthly Anthropic bill noticeably. The best part is zero config: export one environment variable in .zshrc and forget about it.',
     author: 'Elena Rostova',
     role: 'VP of Engineering',
     stack: 'Aider · TypeScript · NestJS',
-    metric: '$980 / mo',
-    metricLabel: 'direct API bill reduction',
+    metric: 'Reduced',
+    metricLabel: 'direct API bill',
+    verified: false,
   },
   {
     id: '3',
     quote:
-      'I was skeptical about local proxies breaking prompt caching. Guardian does the opposite: because it deterministically compresses test tails and preserves AST interfaces, Anthropic’s 1,024-token cache prefix stays locked in turn after turn.',
+      'I was skeptical about local proxies breaking prompt caching. Guardian does the opposite: because it deterministically compresses test tails and preserves AST interfaces, the cache prefix stays intact across turns as long as the pruned prefix region is unchanged.',
     author: 'David Chen',
     role: 'Independent AI Agent Consultant',
     stack: 'Cursor · Python · Pytest',
-    metric: '1.4 ms',
+    metric: 'Measured',
     metricLabel: 'local proxy latency overhead',
+    verified: false,
   },
 ];
 
@@ -56,10 +60,10 @@ export const SocialProof: React.FC = () => {
             <span>Developer Case Studies &amp; Impact</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-            Proven to cut bills on real codebases.
+            Reported to cut bills on real codebases.
           </h2>
           <p className="mt-3 text-base text-slate-300 leading-relaxed">
-            See how engineering teams and solo builders eliminate prompt bloat without sacrificing code generation accuracy.
+            See how engineering teams and solo builders reduce prompt bloat without sacrificing code generation accuracy.
           </p>
         </div>
 
@@ -85,7 +89,7 @@ export const SocialProof: React.FC = () => {
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  "{study.quote}"
+                  &ldquo;{study.quote}&rdquo;
                 </p>
               </div>
 
@@ -108,11 +112,11 @@ export const SocialProof: React.FC = () => {
         <div className="mt-12 rounded-xl border border-slate-800 bg-slate-950/60 p-5 sm:p-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center font-mono">
           <div>
             <div className="text-xs text-slate-400 font-sans">Memory Footprint</div>
-            <div className="text-xl font-bold text-white mt-1 tabular-nums">&lt;14 MB RSS</div>
+            <div className="text-xl font-bold text-white mt-1 tabular-nums">Small</div>
           </div>
           <div>
             <div className="text-xs text-slate-400 font-sans">Daemon Startup Time</div>
-            <div className="text-xl font-bold text-emerald-400 mt-1 tabular-nums">3.8 ms</div>
+            <div className="text-xl font-bold text-emerald-400 mt-1 tabular-nums">Fast</div>
           </div>
           <div>
             <div className="text-xs text-slate-400 font-sans">External Dependencies</div>
@@ -120,7 +124,7 @@ export const SocialProof: React.FC = () => {
           </div>
           <div>
             <div className="text-xs text-slate-400 font-sans">Syntax Validity</div>
-            <div className="text-xl font-bold text-teal-300 mt-1 tabular-nums">100.0%</div>
+            <div className="text-xl font-bold text-teal-300 mt-1 tabular-nums">Preserved</div>
           </div>
         </div>
 
