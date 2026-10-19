@@ -7,7 +7,7 @@ export default defineConfig(() => {
   const disableHmr = process.env.DISABLE_HMR === 'true';
 
   return {
-    base: './',
+    base: '/Prompt-Guardian-/',
     // Polyfill process.env so browser code referencing process.env does not crash
     define: {
       'process.env': {},
